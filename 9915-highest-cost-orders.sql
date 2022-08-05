@@ -21,7 +21,7 @@ WITH daily_cost AS
 (
     SELECT 
         cust_id, order_date, 
-        SUM (total_order_cost) total_cost
+        SUM (total_order_cost) AS total_cost
         FROM orders
         GROUP BY cust_id, order_date
 ) 
