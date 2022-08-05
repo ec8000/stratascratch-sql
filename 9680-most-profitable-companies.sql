@@ -20,7 +20,7 @@ WITH ranked_companies AS
     SELECT 
         company, 
         profits, 
-        dense_rank() over(ORDER BY profits DESC) AS rank
+        DENSE_RANK() OVER (ORDER BY profits DESC) AS rank
     FROM forbes_global_2010_2014
 )
 SELECT 
