@@ -10,7 +10,7 @@
 
 SELECT 
     cust_id, 
-    sum(total_order_cost) AS total_cost
+    SUM (total_order_cost) AS total_cost
 FROM orders
 WHERE order_date between '2019-03-01' AND '2019-03-31'
 GROUP BY cust_id
