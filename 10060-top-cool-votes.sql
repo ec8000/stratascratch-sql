@@ -1,7 +1,6 @@
 -- Find the review_text that received the highest number of 'cool' votes.
 -- Output the business name along with the review text with the highest number of 'cool' votes.
 
-
 -- yelp_reviews
 -- business_name: varchar
 -- review_id:     varchar
@@ -12,7 +11,6 @@
 -- funny:         int
 -- useful:        int
 -- cool:          int
-
 
 WITH ranked_reviews AS 
 (
