@@ -17,7 +17,7 @@ WITH ranked_reviews AS
     SELECT 
         business_name, 
         review_text, 
-        dense_rank () over(ORDER BY cool DESC) AS rank
+        DENSE_RANK() OVER (ORDER BY cool DESC) AS rank
     FROM yelp_reviews
 )
 SELECT business_name, review_text
