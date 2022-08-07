@@ -22,6 +22,8 @@ WITH ranked_reviews AS
         DENSE_RANK() OVER (ORDER BY cool DESC) AS rank
     FROM yelp_reviews
 )
-SELECT business_name, review_text
+SELECT 
+    business_name, 
+    review_text
 FROM ranked_reviews
 WHERE rank = 1;
