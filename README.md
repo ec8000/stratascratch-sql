@@ -1,4 +1,5 @@
 # stratascratch-sql
 
-stratascratch.com
-SQL interview questions
+My solutions to SQL interview questions on stratascratch.com 
+
+
