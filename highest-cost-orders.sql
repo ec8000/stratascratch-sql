@@ -21,13 +21,16 @@ total_order_cost:  int
 
 WITH daily_cost AS 
 (
-    SELECT 
+        SELECT 
         cust_id, order_date, 
         SUM (total_order_cost) AS total_cost
         FROM orders
         GROUP BY cust_id, order_date
 ) 
-SELECT cust.first_name, dc.total_cost, dc.order_date
+SELECT 
+    cust.first_name, 
+    dc.total_cost, 
+    dc.order_date
 FROM customers AS cust
 JOIN daily_cost AS dc ON cust.id = dc.cust_id
 WHERE dc.order_date BETWEEN '2019-02-01' AND '2019-05-01'
