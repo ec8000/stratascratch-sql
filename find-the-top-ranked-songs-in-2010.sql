@@ -19,4 +19,4 @@ SELECT
 FROM billboard_top_100_year_end
 WHERE year = 2010 AND year_rank <= 10
 GROUP BY group_name, song_name, year_rank 
-ORDER BY year_rank ASC;
+ORDER BY year_rank;
