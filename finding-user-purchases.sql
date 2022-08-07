@@ -16,7 +16,7 @@ WITH orders AS
     SELECT 
         user_id, 
         created_at, 
-        LEAD(created_at, 1) OVER (PARTITION BY user_id ORDER BY created_at) AS next_purchase
+        LEAD (created_at, 1) OVER (PARTITION BY user_id ORDER BY created_at) AS next_purchase
     FROM amazon_transactions
 )
 SELECT DISTINCT user_id
