@@ -12,10 +12,9 @@ artist:     varchar
 song_name:  varchar
 */
 
-SELECT 
-    group_name, 
-    song_name, 
-    year_rank 
+SELECT group_name, 
+       song_name, 
+       year_rank 
 FROM billboard_top_100_year_end
 WHERE year = 2010 AND year_rank <= 10
 GROUP BY group_name, song_name, year_rank 
