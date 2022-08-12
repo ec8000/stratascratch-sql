@@ -21,11 +21,11 @@ total_order_cost:  int
 
 WITH daily_cost AS 
 (
-        SELECT 
+    SELECT 
         cust_id, order_date, 
         SUM (total_order_cost) AS total_cost
-        FROM orders
-        GROUP BY cust_id, order_date
+    FROM orders
+    GROUP BY cust_id, order_date
 ) 
 SELECT 
     cust.first_name, 
